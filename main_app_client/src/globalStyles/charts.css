@@ -1,0 +1,4 @@
+.overflow-visible > .recharts-surface {
+  overflow: visible;
+  margin-left: -30px;
+}

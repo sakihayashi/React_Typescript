@@ -1,0 +1,50 @@
+@font-face {
+  font-family: IBMPlexSans-Regular;
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+  src:
+    local("IBMPlexSans-Regular"),
+    local("IBMPlexSans-Regular"),
+    url("../assets/IBMPlexSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IBMPlexSans-Medium;
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+  src:
+    local("IBMPlexSans-Medium"),
+    local("IBMPlexSans-Medium"),
+    url("../assets/IBMPlexSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IBMPlexSans-SemiBold;
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+  src:
+    local("IBMPlexSans-SemiBold"),
+    local("IBMPlexSans-SemiBold"),
+    url("../assets/IBMPlexSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IBMPlexSans-Bold;
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+  src:
+    local("IBMPlexSans-Bold"),
+    local("IBMPlexSans-Bold"),
+    url("../assets/IBMPlexSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  font-display: swap;
+  src: local("OpenSans-Regular"), url("../assets/OpenSans-Regular.ttf") format("truetype");
+}
