@@ -1,0 +1,16 @@
+.oto-icon {
+  font-size: 16px;
+
+  @include oto-respond-to("large") {
+    font-size: 80px;
+  }
+
+  &-m {
+    font-size: 1.5rem;
+  }
+
+  &-warning {
+    color: $oto-color-error;
+    font-size: 2rem;
+  }
+}

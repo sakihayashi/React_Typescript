@@ -1,0 +1,119 @@
+.oto-phase-definitions-container {
+  display: flex;
+  height: calc(100% - 95px);
+  border: 1px solid $oto-border-color;
+
+  .oto-phase-list {
+    position: relative;
+    width: 30%;
+    border-right: 1px solid $oto-border-color;
+
+    .oto-phase-items-header {
+      padding-left: 24px;
+    }
+
+    .oto-phase-list-inner {
+      height: calc(100% - 97px);
+      padding: 0;
+
+      .oto-selected {
+        padding-left: 24px;
+        border-left: 2px solid $oto-color-primary;
+        background-color: $oto-color-main-content-bg;
+      }
+    }
+
+    .oto-phase-item {
+      display: flex;
+      width: 100%;
+      height: 45px;
+      border-top: 1px solid $oto-border-color;
+
+      &:last-child {
+        border-bottom: 1px solid $oto-border-color;
+      }
+
+      .oto-actions {
+        height: 45px;
+        // margin-top: auto;
+      }
+
+      &-btn {
+        display: flex;
+        width: 100%;
+        height: 45px;
+        border-top: 1px solid $oto-border-color;
+      }
+    }
+  }
+
+  .oto-parameters {
+    width: 70%;
+    padding: 18px 26px;
+    background-color: $oto-color-main-content-bg;
+    overflow-y: scroll;
+
+    .oto-params-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // height: 56px;
+
+      .oto-phase-h3 {
+        margin: 0;
+        font-family: $oto-font-semibold;
+        font-size: 20px;
+        text-transform: capitalize;
+      }
+    }
+
+    .oto-params-item {
+      display: flex;
+      justify-content: space-between;
+      height: 112px;
+      margin: 24px 0;
+      padding: 20px 24px 14px;
+      background-color: white;
+    }
+
+    .oto-add-parameter-button {
+      justify-content: center;
+      width: 100%;
+      color: $oto-button-tertiary-text;
+      font-family: $oto-font-button;
+      font-size: 1rem;
+      text-transform: capitalize;
+
+      ::before {
+        padding: 0 50%;
+      }
+
+      &:hover {
+        background-color: $oto-button-tertiary-bg;
+      }
+    }
+  }
+}
+
+.oto-phases {
+  &__list {
+    &-title {
+      font-family: $oto-font-family;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    &-button {
+      width: 50%;
+      // border-bottom: 1px solid $oto-border-color;
+
+      &:disabled {
+        border-bottom: 1px solid $oto-border-color;
+      }
+    }
+
+    &-border-r {
+      border-right: 1px solid $oto-border-color;
+    }
+  }
+}

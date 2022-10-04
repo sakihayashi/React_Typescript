@@ -1,0 +1,45 @@
+.oto-screen {
+  width: 100%;
+
+  @include oto-respond-to("large") {
+    padding: 20px;
+  }
+}
+
+.oto-screen-content {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  align-content: space-between;
+  justify-content: space-between;
+
+  @include oto-respond-to("large") {
+    margin: 0 20px;
+  }
+
+  &__title {
+    @include oto-screen-title;
+  }
+
+  &__subtitle {
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    align-content: center;
+    justify-content: center;
+
+    &--results {
+      width: 640px;
+      margin: 0 44px;
+    }
+
+    @include oto-respond-to("large") {
+      font-size: 16px;
+    }
+  }
+}

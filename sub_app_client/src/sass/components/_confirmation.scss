@@ -1,0 +1,8 @@
+.oto-confirmation {
+  display: flex;
+  justify-content: space-around;
+
+  @include oto-respond-to("large") {
+    font-size: 36px;
+  }
+}

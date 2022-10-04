@@ -1,0 +1,274 @@
+.oto-review {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__table--pagi-container {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  &__icon {
+    margin-bottom: 7px;
+  }
+
+  &__table {
+    height: 100%;
+    font-size: 1rem;
+
+    &--header {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    &--header-cell {
+      color: $oto-table-header-color;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    &--upload {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    &--col {
+      text-align: center;
+    }
+
+    &--col-comments {
+      max-width: 200px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &--pagination {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &--pass {
+      margin-right: 8px;
+      color: $md-primary-color-new;
+      vertical-align: inherit;
+    }
+
+    &--fail {
+      margin-right: 8px;
+      color: $md-danger-color;
+      vertical-align: inherit;
+    }
+  }
+
+  &__see-results {
+    color: $oto-color-primary;
+    font-family: $oto-font-button;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+
+  &__button {
+    text-transform: capitalize;
+
+    &:focus {
+      border: $oto-focus-border;
+    }
+
+    @include oto-respond-to("large") {
+      min-width: 137px;
+      height: 38px;
+      background-color: $oto-color-primary;
+      color: $oto-color-main-content-bg;
+      font-family: $oto-font-button;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: normal;
+
+      &--filter {
+        position: absolute;
+        top: -68px;
+        right: 0;
+      }
+
+      &--upload {
+        position: absolute;
+        top: -68px;
+        right: 180px;
+      }
+
+      &--disabled {
+        background-color: #cbd4eb;
+        color: #003965;
+      }
+
+      &--drawer {
+        min-width: 82px;
+        margin-right: 24px;
+        float: right;
+      }
+    }
+  }
+}
+
+.oto-playback {
+  &--row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 4px;
+
+  &__button {
+    padding: 0;
+  }
+
+  &__select-chart {
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  &__switch-button {
+    height: 28px;
+    padding: 0 8px;
+    border: 1px solid $oto-color-primary;
+    background-color: #fff;
+    color: $oto-color-primary;
+    font-weight: normal;
+    line-height: 28px;
+
+    &--selected {
+      background-color: $oto-color-primary;
+      color: #fff;
+    }
+  }
+}
+
+.oto-close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: white;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.oto-drawer {
+  display: flex;
+  flex-direction: column;
+  width: 473px;
+  margin-top: 50px;
+  // background-color: $oto-color-main-content-bg;
+
+  &__header {
+    flex-direction: row-reverse;
+    height: 78px;
+    padding: 12px 12px 0 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+    &--title {
+      flex-grow: 1;
+      padding: 12px 0;
+      color: $oto-color-content-text;
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+
+    &__label {
+      margin-bottom: 7px;
+    }
+
+    .oto-date {
+      display: flex;
+    }
+  }
+
+  &__panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    // background-color: $oto-color-main-content-bg;
+    box-shadow: none;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &--header {
+      &:focus {
+        border: $oto-focus-border;
+      }
+
+      color: $oto-color-content-text;
+      font-size: 18px;
+    }
+
+    &--header-results {
+      padding-right: 0;
+      padding-left: 0;
+
+      &:hover {
+        background-color: $oto-color-main-content-bg;
+      }
+    }
+
+    &--content {
+      padding: 16px 63px 16px 24px;
+      border-top: 1px solid #e0e1e7;
+    }
+
+    &--content-results {
+      padding: 1.25rem;
+      // border-top: 1px solid #e0e1e7;
+      background-color: $oto-color-main-content-bg;
+    }
+
+    &__datavis-container {
+      background-color: $oto-color-main-content-bg;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    height: 45px;
+    padding: 0 8px 0 8px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 86px;
+    padding: 24px 0;
+    background-color: $oto-table-header-color;
+  }
+}
+
+.oto-modal-result {
+  width: 720px;
+  padding: 2rem;
+}
+
+.oto-review__table--pagi-select {
+  display: inline;
+}

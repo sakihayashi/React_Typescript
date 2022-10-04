@@ -1,0 +1,46 @@
+.oto-recap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+  @include oto-respond-to("large") {
+    font-size: 36px;
+  }
+
+  &__field-value {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  &__field {
+    @include oto-respond-to("large") {
+      padding-right: 24px;
+    }
+  }
+
+  &__value {
+    font-weight: bold;
+  }
+
+  &__aspect-arrow {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+
+    /* stylelint-disable-next-line */
+    > * {
+      @include oto-respond-to("large") {
+        font-size: 64px;
+      }
+    }
+  }
+
+  &--indent {
+    @include oto-respond-to("large") {
+      padding-left: 32px;
+    }
+  }
+}

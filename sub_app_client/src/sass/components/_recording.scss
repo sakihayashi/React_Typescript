@@ -1,0 +1,178 @@
+.oto-recording {
+  @include oto-respond-to("large") {
+    max-width: 100%;
+  }
+
+  &__vumeter {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include oto-respond-to("large") {
+      width: 48px;
+    }
+  }
+
+  &__progress {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__progress-bar {
+    align-content: center;
+    background-color: lightblue;
+
+    @include oto-respond-to("large") {
+      height: 48px;
+    }
+  }
+
+  &__status {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__message {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    white-space: pre-wrap;
+
+    @include oto-respond-to("large") {
+      font-size: 36px;
+    }
+
+    &--info {
+      color: $oto-color-informational;
+    }
+
+    &--error {
+      color: $oto-color-error;
+    }
+  }
+
+  &__session-button {
+    color: $oto-button-color-primary-bg;
+    // font-size: 24px;
+    text-decoration: underline;
+
+    &:hover {
+      background-color: $oto-button-color-secondary-bg-hover;
+      color: $oto-button-color-secondary-text-hover;
+      // font-weight: bold;
+    }
+
+    &:focus {
+      background-color: $oto-button-color-secondary-bg-down-state;
+      color: $oto-button-color-secondary-text-down-state;
+    }
+
+    &.oto-button--disabled {
+      background-color: $oto-color-boarders-tags;
+      color: $oto-color-secondary;
+    }
+  }
+
+  &__session-info {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__label {
+    min-width: 35%;
+    font-size: 18px;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  &__value {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.oto-fill-up {
+  display: flex;
+  position: relative;
+  flex-direction: column-reverse;
+  width: 100%;
+  background: $oto-color-secondary;
+
+  @include oto-respond-to("large") {
+    height: 240px;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+  }
+
+  &__percentage {
+    position: absolute;
+    bottom: 2px;
+    min-height: 5%;
+    max-height: 100%;
+    transition: height 700ms ease-in-out 0s;
+    background: $oto-color-primary;
+
+    @include oto-respond-to("large") {
+      width: calc(100% - 4px);
+      border-radius: 0;
+    }
+  }
+}
+
+.oto-progress {
+  &__label {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+
+  &__value {
+    @include oto-respond-to("large") {
+      margin-right: 8px;
+      color: $oto-color-content-text;
+      font-size: 24px;
+    }
+
+    &::after {
+      content: "/";
+
+      @include oto-respond-to("large") {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__max-value {
+    @include oto-respond-to("large") {
+      color: $oto-color-tag-selected-disabled;
+      font-size: 24px;
+    }
+  }
+
+  &__bar {
+    position: relative;
+    flex-grow: 1;
+    margin: auto;
+    background: $oto-color-tag-selected-disabled;
+
+    @include oto-respond-to("large") {
+      height: 12px;
+      border-radius: 7px;
+    }
+  }
+
+  &__bar-filler {
+    height: 100%;
+    transition: width 1s ease-in-out;
+    border-radius: inherit;
+    background: $oto-color-error;
+  }
+}

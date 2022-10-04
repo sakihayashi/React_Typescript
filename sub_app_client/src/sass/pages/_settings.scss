@@ -1,0 +1,328 @@
+.oto-settings {
+  position: relative;
+  width: 100%;
+  padding: 30px 20px;
+
+  @include oto-respond-to("large") {
+    max-width: 1164px;
+  }
+
+  &__more {
+    float: right;
+  }
+
+  &__textfield {
+    width: 200px;
+    height: 45px;
+  }
+
+  &__dropdown {
+    width: 132px;
+    max-height: 45px;
+    margin: 0 1rem;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    background-color: $oto-input-bg-color;
+    text-align: left;
+  }
+
+  &__dropdown-config {
+    width: 132px;
+    max-height: 45px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    background-color: $oto-input-bg-color;
+    text-align: left;
+  }
+
+  &__dropdown-d {
+    width: 200px;
+    max-height: 45px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    background-color: $oto-input-bg-color;
+    text-align: left;
+  }
+
+  &__addasset {
+    letter-spacing: normal !important;
+  }
+
+  &__p {
+    padding: 0 1rem;
+    color: $oto-color-secondary-new;
+  }
+
+  &__button {
+    height: 45px !important;
+    min-height: 45px !important;
+    font-family: $oto-font-button;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-transform: none;
+
+    @include oto-respond-to("large") {
+      min-width: 137px;
+      height: 56px;
+      background-color: #cbd4eb;
+      color: #003965;
+      font-size: 14px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__tableheader {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  &__title {
+    font-family: $oto-font-family;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  &__panel {
+    &__header:focus {
+      border: $oto-focus-border;
+    }
+
+    &--container {
+      padding: 0 1rem;
+    }
+  }
+
+  &__panel-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  &__syncStatus {
+    display: flex;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 293px;
+
+    &__icon {
+      color: $oto-color-primary;
+    }
+  }
+
+  &__syncStatus--column {
+    color: $oto-color-secondary-new;
+  }
+
+  &__duration {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+
+  &__assetContainer {
+    padding: 0;
+
+    .oto-dropdown__label {
+      color: $oto-color-secondary-new;
+    }
+  }
+
+  &__tab {
+    @include oto-respond-to("large") {
+      min-width: 155px;
+      height: 36px;
+      margin-right: 24px;
+      border-bottom-width: 4px;
+      font-family: $oto-font-secondary;
+      font-size: 18px;
+      letter-spacing: normal;
+    }
+
+    &:focus {
+      border: $oto-focus-border;
+    }
+
+    justify-content: left !important;
+    margin-bottom: 10px;
+    padding-top: 0;
+    padding-left: 0 !important;
+    border-bottom-style: solid;
+    border-bottom-color: $oto-color-tag-selected-disabled;
+    color: $oto-color-tag-selected-disabled;
+    font-family: $oto-font-secondary;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    text-transform: capitalize;
+
+    &--selected {
+      border-bottom-color: $oto-color-primary;
+      color: $oto-color-content-text;
+    }
+  }
+
+  &__tabs-row {
+    display: flex;
+  }
+
+  &__sync {
+    &--is-syncing {
+      @include oto-spin-animation;
+    }
+  }
+
+  &--row {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &--row--justified {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+}
+
+.oto-channel-mapping {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  @include oto-respond-to("large") {
+    width: 100%;
+  }
+
+  &__message {
+    @include oto-respond-to("large") {
+      margin: 20px;
+      font-size: 24px;
+    }
+  }
+
+  &__list-section {
+    display: flex;
+    justify-content: space-around;
+    min-width: 620px;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid $oto-color-boarders-tags;
+  }
+
+  &__button-section {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+  }
+
+  &__list-wrapper {
+    width: 100%;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    width: 100%;
+    border-bottom: 1px solid $oto-color-tag-selected-disabled;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  &__label {
+    height: initial;
+    padding: 0 0 8px;
+    background-color: $oto-color-background-card;
+    color: $oto-color-header;
+    line-height: initial;
+    list-style: none;
+  }
+
+  &__list-item-content {
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &--selected {
+    background-color: $oto-color-tag-hover;
+  }
+
+  .oto-button {
+    font-size: 18px;
+  }
+}
+
+.oto-button-wrapper {
+  width: 100%;
+  text-align: right;
+
+  .oto-settings-save {
+    color: $oto-color-primary;
+
+    &:focus {
+      border: $oto-focus-border;
+    }
+  }
+}
+
+.oto-asset-type-dialog {
+  min-width: 600px;
+
+  &__list-wrapper {
+    width: 100%;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__footer {
+    padding: 24px;
+  }
+
+  .oto-variants-channels {
+    display: flex;
+    justify-content: space-between;
+
+    .oto-asset-dialog-column {
+      width: 250px;
+
+      .oto-selectable-list {
+        width: 100%;
+        height: 250px;
+        border-bottom: 1px solid $oto-color-tag-selected-disabled;
+        background-color: #f3f3f3;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+      .oto-selectable-list-header {
+        height: 42px;
+      }
+
+      .oto-add-item {
+        display: flex;
+      }
+
+      .oto-textinput-s {
+        border-radius: 0;
+      }
+    }
+  }
+}

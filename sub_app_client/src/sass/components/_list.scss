@@ -1,0 +1,28 @@
+.oto-list {
+  &__list {
+    @include oto-respond-to("large") {
+      width: 508px;
+      height: $oto-input-field-height--large * 4;
+    }
+  }
+
+  &__label-row {
+    display: flex;
+    flex-direction: row nowrap;
+  }
+
+  &__label-subtitle {
+    color: $oto-color-tag-selected-disabled;
+
+    @include oto-respond-to("large") {
+      margin-left: 8px;
+    }
+  }
+
+  &__list-item-content {
+    @include oto-respond-to("large") {
+      font-size: 24px;
+      line-height: 1.33;
+    }
+  }
+}

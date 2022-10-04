@@ -1,0 +1,76 @@
+.oto-login {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+
+  &__picture {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: $oto-color-boarders-tags;
+
+    &-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__text {
+    width: 50%;
+
+    @include oto-respond-to("large") {
+      padding-top: 62px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &__title {
+    font-family: $oto-font-title;
+
+    @include oto-respond-to("large") {
+      margin-bottom: 53px;
+      font-size: 64px;
+    }
+  }
+
+  &__subtitle {
+    @include oto-respond-to("large") {
+      font-size: 32px;
+    }
+  }
+
+  &__label {
+    text-transform: capitalize;
+
+    @include oto-respond-to("large") {
+      margin: 28px 0 0 0;
+      font-size: 24px;
+    }
+  }
+
+  &__textinput {
+    background-color: $oto-color-background-card;
+
+    @include oto-respond-to("large") {
+      width: 508px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__input {
+    @include oto-respond-to("large") {
+      margin-left: 16px;
+      font-size: 32px;
+    }
+  }
+
+  &__button {
+    @include oto-respond-to("large") {
+      margin-top: 42px;
+    }
+  }
+}

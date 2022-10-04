@@ -1,0 +1,354 @@
+.oto-diagnosis-score {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  align-content: space-between;
+  justify-content: space-between;
+
+  &__next-page {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    vertical-align: middle;
+  }
+
+  &__next-page-button {
+    @include oto-respond-to("large") {
+      width: 1280px;
+      height: 80px;
+      margin: 16px;
+      font-size: 24px;
+    }
+  }
+
+  &__no-score {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__diagnostics {
+    @include oto-respond-to("large") {
+      width: 671px;
+    }
+  }
+
+  &__diagnostics-title-row {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 25px;
+  }
+
+  &__diagnostics-title {
+    @include oto-respond-to("large") {
+      font-size: 20px;
+    }
+  }
+
+  &__diagnostics-string {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+
+    @include oto-respond-to("large") {
+      margin-left: 21px;
+      padding-right: 8px;
+      padding-left: 8px;
+      border-radius: 4.9px;
+      background-color: $oto-color-informational;
+    }
+  }
+
+  &__detailed-results-button {
+    height: 100%;
+    margin-left: auto;
+
+    @include oto-respond-to("large") {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+
+  &__diagnosis-score-button {
+    height: fit-content;
+    margin-left: auto;
+
+    @include oto-respond-to("large") {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+
+  &__detailed-results {
+    width: 100%;
+
+    @include oto-respond-to("large") {
+      height: 500px;
+    }
+  }
+
+  &__info {
+    @include oto-respond-to("large") {
+      margin-bottom: 10px;
+    }
+
+    &--row {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    &--col {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    &--label {
+      font-weight: bold;
+
+      @include oto-respond-to("large") {
+        margin-right: 10px;
+      }
+
+      &::after {
+        content: ":";
+      }
+    }
+
+    &--warning {
+      @include oto-respond-to("large") {
+        margin-bottom: 10px;
+        background-color: $oto-color-warning;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &--right-align {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-end;
+  }
+
+  &--error {
+    background-color: $oto-color-error;
+  }
+}
+
+.oto-score {
+  width: 100%;
+
+  &__bar--inline {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    vertical-align: middle;
+  }
+
+  &__bar-max {
+    text-align: right;
+  }
+
+  &__bar-max,
+  &__bar-min {
+    @include oto-respond-to("large") {
+      min-width: 112px;
+    }
+  }
+
+  &__bar {
+    position: relative;
+    flex-grow: 1;
+    margin: auto;
+    background: $oto-color-tag-selected-disabled;
+
+    @include oto-respond-to("large") {
+      height: 8px;
+      border-radius: 7px;
+    }
+  }
+}
+
+.oto-score-expander {
+  &__header {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+  }
+
+  &__label {
+    width: 100%;
+    max-width: 630px;
+  }
+
+  &__button {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+  }
+
+  &__button-label {
+    position: absolute;
+    top: 36px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  &__button-icon {
+    width: 50px;
+    font-size: 48px;
+  }
+
+  &__list {
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-right: 60px;
+
+    .oto-score__bar--inline {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-item-label {
+    width: 180px;
+    padding-right: 10px;
+    font-weight: bold;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.oto-score-value {
+  $oto-score-value-width--large: 40px;
+  $oto-score-value-width--medium: 24px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  &__spacer {
+    display: flex;
+    position: absolute;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+
+    @include oto-respond-to("large") {
+      margin-left: $oto-score-value-width--large * 0.5;
+    }
+  }
+
+  &__arrow-number {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-weight: bold;
+
+    @include oto-respond-to("large") {
+      font-size: $oto-score-value-width--large;
+    }
+
+    /* stylelint-disable-next-line */
+    > * {
+      @include oto-respond-to("large") {
+        height: $oto-score-value-width--large * 0.6;
+        font-size: $oto-score-value-width--large;
+      }
+    }
+  }
+}
+
+.oto-filler {
+  height: 100%;
+  border-radius: inherit;
+  background: $md-primary-color-new;
+
+  @include oto-respond-to("large") {
+    border-radius: inherit;
+  }
+}
+
+.oto-feedback {
+  display: flex;
+  flex-direction: column;
+
+
+  &__icon {
+    width: 32px;
+    padding: 12px 0;
+  }
+
+  &__check {
+    display: flex;
+    align-items: baseline;
+    margin-left: -1rem;
+
+    &--pass {
+      margin-right: 76px;
+      margin-left: 8px;
+      color: $md-primary-color-new;
+    }
+
+    &--fail {
+      margin-left: 8px;
+      color: $md-danger-color;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__header {
+    margin-top: 1rem;
+    margin-bottom: 16px;
+    color: $oto-color-secondary-new;
+    font-family: $oto-font-family;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  &__comment {
+    width: 100%;
+    height: 104px;
+    padding: 8px;
+    background-color: $oto-color-main-content-bg;
+
+    &--label {
+      margin-top: 1rem;
+      color: $oto-color-secondary-new;
+      font-family: $oto-font-family;
+      font-size: 14px;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    &--button {
+      min-width: 137px;
+      height: 38px;
+      background-color: #009fbd;
+      color: $oto-color-main-content-bg;
+      font-family: $oto-font-family;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}

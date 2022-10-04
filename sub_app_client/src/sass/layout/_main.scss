@@ -1,0 +1,107 @@
+.oto-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: $oto-color-main-content-bg;
+  color: $oto-color-content-text;
+  font-family: $oto-font-family;
+  font-weight: 500;
+
+  &i {
+    margin: auto;
+  }
+
+  &label {
+    margin-bottom: 0 !important;
+  }
+
+  &__tabs-row {
+    letter-spacing: normal;
+  }
+
+  &__loading {
+    @include oto-respond-to("large") {
+      height: 600px;
+      margin: 20px;
+      font-size: 32px;
+    }
+  }
+
+  &__block {
+    @include oto-respond-to("large") {
+      width: 1164px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
+    background-color: $oto-color-main-content-bg;
+  }
+
+  &__page_title {
+    margin-top: 40px;
+    color: $oto-color-content-text;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  &__body {
+    margin-top: 1rem;
+    // @include oto-respond-to("large") {
+    //   margin-top: 1rem;
+    // }
+
+    // display: flex;
+    // flex-flow: row nowrap;
+    // flex-grow: 1;
+    // align-content: flex-start;
+    // justify-content: space-between;
+    background-color: $oto-color-background-card;
+  }
+
+  &__fullheight {
+    min-height: calc(100vh - 190px);
+  }
+
+  &__tab {
+    @include oto-respond-to("large") {
+      min-width: 155px;
+      height: 36px;
+      margin-top: 18px;
+      margin-right: 24px;
+      border-bottom-width: 4px;
+      font-family: $oto-font-secondary !important;
+      font-size: 18px;
+      letter-spacing: normal;
+    }
+
+    justify-content: left !important;
+    padding-top: 0;
+    padding-left: 0 !important;
+    border-bottom-style: solid;
+    border-bottom-color: $oto-color-tag-selected-disabled;
+    color: $oto-color-tag-selected-disabled;
+    font-weight: normal;
+    text-align: left;
+    text-transform: capitalize;
+
+    &--selected {
+      border-bottom-color: $oto-color-primary;
+      color: $oto-color-content-text;
+    }
+
+    &:focus {
+      border: $oto-focus-border;
+    }
+  }
+}
+
+.oto-review-fonticon {
+  vertical-align: top;
+}
+
+.oto-review-fonticon:hover {
+  cursor: pointer;
+}

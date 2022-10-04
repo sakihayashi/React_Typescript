@@ -1,0 +1,29 @@
+.oto-account {
+  @include oto-respond-to("large") {
+    margin-left: 20px;
+  }
+
+  &__title {
+    @include oto-screen-title;
+  }
+
+  &__label {
+    font-weight: 500;
+    line-height: 1.33;
+
+    @include oto-respond-to("large") {
+      margin: 20px 0 0 0;
+      font-size: 24px;
+    }
+  }
+
+  &__value {
+    font-weight: bold;
+    line-height: 1.33;
+
+    @include oto-respond-to("large") {
+      margin: 0 0 30px 0;
+      font-size: 24px;
+    }
+  }
+}

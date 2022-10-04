@@ -1,0 +1,25 @@
+.oto-textinput {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  background-color: $oto-color-main-content-bg;
+
+  @include oto-respond-to("large") {
+    width: $oto-width-input-field--large;
+    height: $oto-input-field-height--large;
+  }
+
+  &__label {
+    margin-bottom: 7px;
+    font-size: $oto-font-size-label--large;
+  }
+
+  &__input {
+    width: 100%;
+
+    @include oto-respond-to("large") {
+      height: $oto-input-field-height--large;
+      font-size: $oto-font-size-value--large;
+    }
+  }
+}

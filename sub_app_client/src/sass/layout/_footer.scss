@@ -1,0 +1,12 @@
+.oto-footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  text-align: center;
+
+  &__version {
+    @include oto-respond-to("large") {
+      font-size: 32px;
+    }
+  }
+}

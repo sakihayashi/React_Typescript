@@ -1,0 +1,139 @@
+.oto-button {
+  height: 45px;
+  padding: 12px 1rem;
+  border-radius: 0;
+  font-family: $oto-font-button;
+  font-size: 16px;
+  text-transform: capitalize;
+
+  @include oto-respond-to("large") {
+    // min-width: 137px;
+    max-width: $oto-width-input-field--large;
+    min-height: 45px;
+    // font-size: 18px;
+  }
+
+  &:focus {
+    border: $oto-focus-border;
+  }
+
+  &--primary {
+    border-color: $oto-button-color-primary-bg;
+    background-color: $oto-button-color-primary-bg;
+    color: $oto-button-color-primary-text;
+
+    &:hover,
+    &:focus {
+      background-color: $oto-button-color-primary-bg-hover;
+    }
+
+    &:disabled {
+      border-color: $oto-color-tag-selected-disabled;
+      background-color: $oto-color-tag-selected-disabled;
+      color: $oto-color-secondary;
+    }
+
+    &.oto-button--disabled {
+      background-color: $oto-color-tag-selected-disabled;
+      color: $oto-color-secondary;
+    }
+  }
+
+  &--secondary {
+    background-color: $oto-button-color-secondary-bg;
+    color: $oto-button-color-secondary-text;
+
+    &:hover {
+      background-color: $oto-button-color-secondary-bg-hover;
+      color: $oto-button-color-secondary-text-hover;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      background-color: $oto-button-color-secondary-bg-down-state;
+      color: $oto-button-color-secondary-text-down-state;
+    }
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    &.oto-button--disabled {
+      background-color: $oto-color-tag-selected-disabled;
+      color: $oto-color-secondary;
+    }
+  }
+
+  &--tertiary {
+    background-color: $oto-button-tertiary-bg;
+    color: $oto-button-tertiary-text;
+    letter-spacing: normal;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      background-color: $oto-button-tertiary-bg-hover;
+    }
+
+    &:focus {
+      background-color: $oto-button-tertiary-bg-hover;
+    }
+
+    &:disabled {
+      background-color: $oto-button-disabled-bg;
+      color: $oto-button-disabled-text;
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: $oto-button-tertiary-text;
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: $oto-button-tertiary-bg;
+    }
+
+    &:focus {
+      background-color: $oto-button-tertiary-bg;
+      color: $oto-button-color-secondary-text-down-state;
+      text-decoration: none;
+    }
+
+    &:disabled {
+      background-color: white;
+      color: $oto-button-disabled-text-ghost;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+
+  &--error {
+    border-color: $oto-color-error;
+    background-color: $oto-color-error;
+    color: $oto-button-color-primary-text;
+
+    &:hover {
+      background-color: $oto-button-color-error-bg-hover;
+    }
+
+    &:disabled {
+      border-color: $oto-color-tag-selected-disabled;
+      background-color: $oto-color-tag-selected-disabled;
+      color: $oto-color-secondary;
+    }
+
+    &.oto-button--disabled {
+      background-color: $oto-color-tag-selected-disabled;
+      color: $oto-color-secondary;
+    }
+  }
+}
+
+.oto-button::first-letter {
+  text-transform: uppercase;
+}

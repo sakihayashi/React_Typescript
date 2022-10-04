@@ -1,0 +1,12 @@
+.oto-dialog {
+  &-title {
+    font-family: $oto-font-family;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+}
+
+.oto-dialog-w640 {
+  max-width: 640px;
+}

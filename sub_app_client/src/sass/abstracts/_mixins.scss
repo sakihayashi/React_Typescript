@@ -1,0 +1,78 @@
+$oto-breakpoints: (
+  "medium": "only screen and (min-width: 80px) and (max-width: 1279px)",
+  "large": "only screen and (min-width: 1280px)",
+);
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $oto-breakpoint - Breakpoint
+/// @requires $oto-breakpoints
+@mixin oto-respond-to($oto-breakpoint) {
+  $raw-query: map-get($oto-breakpoints, $oto-breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error "No value found for `#{$oto-breakpoint}`. Please make sure it is defined in `$oto-breakpoints` map.";
+  }
+}
+
+@mixin oto-custom-scroll-bar() {
+  @include oto-respond-to("large") {
+    $oto-scrollbar-width: 20px;
+    $oto-scrollbar-height: 100px;
+    $oto-scrollbar-border-radius: 10px;
+    $oto-scrollbar-shadow-box: $oto-scrollbar-width * 0.15;
+
+    &::-webkit-scrollbar {
+      width: $oto-scrollbar-width;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      -webkit-border-radius: $oto-scrollbar-border-radius;
+      border-radius: $oto-scrollbar-border-radius;
+      -webkit-box-shadow: inset 0 0 $oto-scrollbar-shadow-box rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 $oto-scrollbar-shadow-box rgba(0, 0, 0, 0.3);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      height: $oto-scrollbar-height;
+      border-radius: $oto-scrollbar-border-radius;
+      background: #999;
+    }
+  }
+}
+
+@mixin oto-screen-title() {
+  text-transform: capitalize;
+
+  @include oto-respond-to("large") {
+    margin-top: 22px;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+}
+
+@keyframes spin {
+  100% {
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@mixin oto-spin-animation() {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}

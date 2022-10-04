@@ -1,0 +1,160 @@
+$md-media-included: false;
+@import 'react-md-variables';
+
+// react-md v2 scoped packages
+// @import '~@react-md/theme/dist/mixins';
+// @import '~@react-md/typography/dist/mixins';
+// @import '~@react-md/alert/dist/mixins';
+// @import '~@react-md/app-bar/dist/mixins';
+// @import '~@react-md/button/dist/mixins';
+// @import '~@react-md/dialog/dist/mixins';
+// @import '~@react-md/expansion-panel/dist/mixins';
+// @import '~@react-md/form/dist/mixins';
+// @import '~@react-md/icon/dist/mixins';
+// @import '~@react-md/list/dist/mixins';
+// @import '~@react-md/menu/dist/mixins';
+// @import '~@react-md/sheet/dist/mixins';
+// @import '~@react-md/table/dist/mixins';
+
+// @include react-md-theme;
+// @include react-md-typography;
+// @include react-md-alert;
+// @include react-md-app-bar;
+// @include react-md-button;
+// @include react-md-dialog;
+// @include react-md-expansion-panel;
+// @include react-md-form;
+// @include react-md-icon;
+// @include react-md-list;
+// @include react-md-menu;
+// @include react-md-sheet;
+// @include react-md-table;
+// @include react-md-utils;
+
+$md-primary-color: $oto-color-primary;
+$md-secondary-color: $oto-color-secondary;
+$md-primary-color-new: #4db182;
+$md-danger-color: #931241;
+
+.oto-dropdown,
+.oto-list,
+.oto-textinput {
+  .md-text {
+    height: 100%;
+  }
+
+  .md-text-field {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    @include oto-respond-to('large') {
+      height: $oto-input-field-height--large;
+      padding-left: 16px;
+    }
+  }
+
+  .md-list-item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    @include oto-respond-to('large') {
+      height: $oto-input-field-height--large;
+    }
+  }
+
+  .md-list-item + .md-list-item {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 1px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: $oto-color-boarders-tags;
+
+      @include oto-respond-to('large') {
+        left: 16px;
+        right: 16px;
+      }
+    }
+  }
+
+  hr {
+    margin-top: 0;
+    background-color: unset;
+
+    &::after {
+      background-color: unset;
+    }
+  }
+}
+
+.oto-dropdown__S {
+  .rmd-option--selected {
+    background-color: $oto-color-primary;
+  }
+}
+
+.oto-review__table--upload-all {
+  .md-icon {
+    font-size: 24px;
+  }
+}
+
+.oto-toast {
+  .md-btn--snackbar {
+    padding: 0;
+  }
+
+  .md-snackbar {
+    &--toast {
+      overflow: hidden;
+      color: inherit;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.oto-date {
+  span.md-picker-text--active {
+    color: $oto-color-primary;
+    font-weight: bold;
+  }
+}
+
+.oto-settings__settings-tab {
+  .md-collapser {
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+
+  .md-collapser--flipped {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  i {
+    // margin-right: 24px;
+    margin-left: 0;
+    color: #009fbd;
+  }
+
+  .md-panel-header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .md-panel-content {
+    padding: 0 24px 16px 48px;
+    color: $oto-color-secondary-new;
+  }
+
+  .md-paper--1 {
+    border-top: 1px solid #e0e1e7;
+    box-shadow: none;
+  }
+}

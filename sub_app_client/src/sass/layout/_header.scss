@@ -1,0 +1,170 @@
+.oto-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: $oto-color-header;
+
+  @include oto-respond-to("large") {
+    height: 50px;
+  }
+
+  &__left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    color: $oto-color-main-content-bg;
+    font-weight: bold;
+
+    @include oto-respond-to("large") {
+      margin-left: 21px;
+      font-size: 16px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    height: 100%;
+    border-left: 1px solid $oto-color-main-content-bg;
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    color: $oto-color-main-content-bg;
+
+    @include oto-respond-to("large") {
+      height: 100%;
+      // padding-top: 15px;
+      padding-right: 21px;
+      padding-left: 21px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__icon {
+    margin: auto 21px;
+    color: $oto-color-main-content-bg;
+    font-size: 32px;
+  }
+
+  &__logo {
+    width: auto;
+    height: 50px;
+  }
+
+  &__menu-toggle {
+    height: 100%;
+
+    &:focus {
+      border: $oto-focus-border;
+    }
+
+    color: $oto-color-main-content-bg;
+    text-transform: none;
+
+    @include oto-respond-to("large") {
+      padding-right: 21px;
+      padding-left: 21px;
+      font-size: 16px;
+    }
+
+    &--row {
+      display: flex;
+      flex-flow: row nowrap;
+      vertical-align: middle;
+
+      @include oto-respond-to("large") {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__lan-btn {
+    color: $oto-color-main-content-bg;
+  }
+
+  &__menu-toggle-icon {
+    color: $oto-color-main-content-bg;
+
+    @include oto-respond-to("large") {
+      padding-top: 0;
+      padding-left: 10px;
+      font-size: 24px;
+    }
+
+    &--language {
+      @include oto-respond-to("large") {
+        padding-top: 0;
+        padding-right: 10px;
+        padding-left: 0;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__menu-toggle-text {
+    &--language {
+      text-transform: uppercase;
+    }
+  }
+
+  &__menu-list-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: $oto-color-boarders-tags;
+    text-transform: capitalize;
+
+    &:focus {
+      border: $oto-focus-border;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    @include oto-respond-to("large") {
+      min-width: 202px;
+      height: 57px;
+      // padding-top: 21px;
+      padding-left: 14px;
+      font-size: 16px;
+    }
+
+    &--language {
+      justify-content: center;
+      min-width: unset;
+      text-transform: uppercase;
+    }
+  }
+
+  &__menu-list-item + &__menu-list-item {
+    position: relative;
+    background-color: transparent;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      height: 1px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: $oto-color-tag-hover;
+      content: "";
+
+      @include oto-respond-to("large") {
+        right: 16px;
+        left: 16px;
+      }
+    }
+  }
+}

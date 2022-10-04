@@ -1,0 +1,111 @@
+.oto-dropdown {
+  // additional styling in vendor/_react-md.scss
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  background-color: $oto-color-main-content-bg;
+  text-align: left;
+  text-transform: capitalize;
+
+  @include oto-respond-to("large") {
+    width: $oto-width-input-field--large;
+    height: $oto-input-field-height--large;
+  }
+
+  &__displayed {
+    width: 100%;
+    text-align: left;
+  }
+
+  &__s {
+    width: 150px;
+    height: 45px;
+    margin-top: 8px;
+    margin-bottom: 9px;
+    padding-left: 1rem;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    background-color: $oto-color-main-content-bg;
+    text-transform: capitalize;
+  }
+
+  &__unit {
+    display: flex;
+    align-items: center;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__group {
+    margin-right: 22px;
+    margin-bottom: 25px;
+
+    .oto-textinput {
+      display: flex;
+      justify-content: center;
+      padding-top: 5px;
+      border: none;
+      background-color: $oto-color-main-content-bg;
+    }
+  }
+
+  &__group-col3 {
+    width: 33.33%;
+    margin-right: 22px;
+    margin-bottom: 25px;
+  }
+
+  &__label {
+    margin-bottom: 7px;
+    font-size: $oto-font-size-label--large;
+  }
+
+  &__input {
+    width: 100%;
+
+    @include oto-respond-to("large") {
+      height: $oto-input-field-height--large;
+      font-size: $oto-font-size-value--large;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  &__list {
+    @include oto-custom-scroll-bar;
+
+    max-height: 60%;
+    text-transform: capitalize;
+
+    @include oto-respond-to("large") {
+      max-height: 480px;
+    }
+  }
+
+  &__error {
+    border-bottom: 0.5px solid $oto-color-error;
+
+    &-msg {
+      display: flex;
+      min-height: 20px;
+      margin-top: 10px;
+      color: $oto-color-error;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "lib": ["dom", "es2015", "es6", "esnext"],
+    "allowJs": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "removeComments": true,
+    "jsx": "react",
+    "baseUrl": "./src",
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "noUnusedLocals": true,
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "esModuleInterop": true,
+    "useDefineForClassFields": true
+},
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/Unused"
+  ]
+}
